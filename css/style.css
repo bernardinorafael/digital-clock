@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --main-font: 'Open Sans', sans-serif;
+  --bg-color-ylw: #dbf227;
+  --bg-color-grn: #0e3a17;
+  --bg-color-wht: #fff;
+  --bg-color-ble: #202022;
+  --bg-color-blue: #878787;
+  --bg-color-blk: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-color-blk);
+  background-image: url(../img/bg-office.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  max-width: 1000px;
+  
+  background-color: rgba(255, 255, 255, 0.322);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.main-text-box {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-weight: bolder;
+
+  margin-bottom: 50px;
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: #f00 0 0, #0ff 0 0;
+  transition: text-shadow 400ms;
+}
+
+.main-text-box:hover {
+  text-shadow: #f00 -3px 0, #0ff 3px 0;
+}
+
+.name-box {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 50px;
+}
+
+.by-box {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.clock-box {
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 700px;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 40px;
+  background: linear-gradient(120deg, transparent, transparent);
+  border-radius: 7px;
+}
+
+.clock-box div {
+  height: 170px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-color-wht);
+  background-color: rgba(5, 5, 5, .9);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+  border-radius: 7px;
+  letter-spacing: 3px;
+}
+
+.clock-box span {
+  font-weight: bolder;
+  font-size: 60px;
+
+  background: linear-gradient(to left, var(--bg-color-ble), var(--bg-color-wht));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.clock-box .time-box {
+  font-size: 15px;
+}
